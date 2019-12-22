@@ -6,8 +6,8 @@ public class Node<N>
 
     public Node(N k)
     {
-        value = 1;
-        key = k;
+    	key = k;
+        value = 1;   
         next = null;
     }
 
@@ -41,7 +41,7 @@ public class Node<N>
         return key;
     }
 
-    public void incrementValue() 
+    public void increaseValue() 
     {
         value++;
     }

@@ -5,9 +5,11 @@ public class TestBag {
         	
     	System.out.println("Test of object equals");
         Bag bag = new Bag();
-        Temp temp = new Temp();
+        Bag bag2 = new Bag();
+        TestObj testObj = new TestObj();
         
-        System.out.println("Bag and Temp objects is equal : "+bag.equals(temp));      
+        System.out.println(bag.getName()+ " and "+testObj.getName()+" objects is equal : "+bag.equals(testObj));
+        System.out.println(bag.getName()+" and "+bag2.getName()+"2 objects is equal : "+bag.equals(bag2));      
         
         System.out.println("*********************");
         
@@ -22,19 +24,22 @@ public class TestBag {
         bag.add("koparal");
   
         bag.display();
+        
         System.out.println(bag);
                
         System.out.println("*********************");
         
-        System.out.println("Is contains 'saban' : "+ bag.contains("saban"));
+        System.out.println("Is contains 'anil' : "+ bag.contains("anil"));
         
-        System.out.println("Is contains 'cbü' : "+ bag.contains("cbü"));
+        System.out.println("Is contains 'Saban' : "+ bag.contains("Saban"));
+        
+        System.out.println("*********************");     
+        
+        System.out.println("Element Size : " + bag.size());
         
         System.out.println("*********************");
         
-        int distictSize = bag.distictSize();
-        
-        System.out.println("Distict Size : " + distictSize);
+        System.out.println("Distict Size : " + bag.distictSize());
         
         System.out.println("*********************");
         
@@ -42,14 +47,12 @@ public class TestBag {
         
         System.out.println("Element Size of 'anil' : "+ elementSizeByItem);
         
-        System.out.println("*********************");
+      	int elementSizeByItem2 = bag.elementSize("saban");
         
-        
-        int size = bag.size();
-        
-        System.out.println("Size of Bag : "+ size);
+        System.out.println("Element Size of 'saban' : "+ elementSizeByItem2);
         
         System.out.println("*********************");
+       
         
         System.out.println("Removed items in the bag : ");
         
@@ -65,9 +68,9 @@ public class TestBag {
         
         System.out.println("*********************");
         
-        System.out.println("Trying to delete a record that's not in the bag");
+        System.out.println("Trying to delete 'test' record that's not in the bag");
         
-        bag.remove("thebag");
+        bag.remove("test");
         
         System.out.println("*********************");
         
@@ -80,6 +83,9 @@ public class TestBag {
         System.out.println("Clear After");
         System.out.println("isEmpty : "+bag.isEmpty());
         
+        System.out.println("Display List");
+        bag.display();
+       
         System.out.println("*********************");
         
 
